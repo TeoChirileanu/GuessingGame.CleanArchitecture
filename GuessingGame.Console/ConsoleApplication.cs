@@ -15,7 +15,7 @@ namespace GuessingGame.ConsoleApplication {
 
         private static void PlayGame() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(new Game(new SmsMessenger()), new KeyboardGetter());
+            var controller = new GameController(new Game(new EmailMessenger()), new KeyboardGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);

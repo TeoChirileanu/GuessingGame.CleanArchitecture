@@ -70,6 +70,15 @@ namespace GuessingGame.ConsoleApplication.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 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.
+        /// </summary>
+        internal static string SendGridApiKey {
+            get {
+                return ResourceManager.GetString("SendGridApiKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AC6d26f0a9e694163f54a6cf4e8a6156d8.
         /// </summary>
         internal static string TwilioAccountSid {

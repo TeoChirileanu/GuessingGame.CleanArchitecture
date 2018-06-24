@@ -129,4 +129,7 @@
   <data name="GameOverMessage" xml:space="preserve">
     <value>Something bad happened. Sorry, game over. Here are some details: </value>
   </data>
+  <data name="SendGridApiKey" xml:space="preserve">
+    <value>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</value>
+  </data>
 </root>

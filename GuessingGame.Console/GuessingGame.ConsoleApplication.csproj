@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
     <PackageReference Include="Twilio" Version="5.13.5" />
   </ItemGroup>
 
