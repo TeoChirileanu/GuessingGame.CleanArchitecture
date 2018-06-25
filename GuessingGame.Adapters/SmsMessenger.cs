@@ -10,8 +10,8 @@ namespace GuessingGame.Adapters {
             TwilioClient.Init(Resources.TwilioAccountSid, Resources.TwilioAuthToken);
 
             MessageResource.Create(
-                new PhoneNumber("+436764178797"),
-                @from: new PhoneNumber(Resources.TwilioPhoneNumber),
+                new PhoneNumber("+436764178796"),
+                from: new PhoneNumber(Resources.TwilioPhoneNumber),
                 body: message);
         }
     }

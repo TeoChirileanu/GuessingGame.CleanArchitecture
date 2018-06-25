@@ -1,5 +1,4 @@
-﻿
-namespace GuessingGame.BusinessRules {
+﻿namespace GuessingGame.BusinessRules {
     public class GameController {
         private readonly IGame _game;
         private readonly INumberGetter _numberGetter;

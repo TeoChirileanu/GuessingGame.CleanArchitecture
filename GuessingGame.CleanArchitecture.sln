@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.BusinessRules.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.ConsoleApplication", "GuessingGame.Console\GuessingGame.Gui.ConsoleApplication.csproj", "{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Adapters", "GuessingGame.Adapters\GuessingGame.Adapters.csproj", "{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Adapters", "GuessingGame.Adapters\GuessingGame.Adapters.csproj", "{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Shared", "GuessingGame.Shared\GuessingGame.Shared.csproj", "{CC40CA0C-9867-4125-9E9F-C73974256BD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Shared", "GuessingGame.Shared\GuessingGame.Shared.csproj", "{CC40CA0C-9867-4125-9E9F-C73974256BD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Adapters.WebApi", "GuessingGame.Adapters.WebApi\GuessingGame.Adapters.WebApi.csproj", "{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,6 @@ using GuessingGame.Shared.Properties;
 namespace GuessingGame.Gui.ConsoleApplication {
     public class ConsoleApplication {
         private static void Main() {
-
             try {
                 PlayGame();
             }
@@ -17,7 +16,7 @@ namespace GuessingGame.Gui.ConsoleApplication {
 
         private static void PlayGame() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(new Game(new EmailMessenger()), new KeyboardGetter());
+            var controller = new GameController(new Game(new SmsMessenger()), new KeyboardGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);
