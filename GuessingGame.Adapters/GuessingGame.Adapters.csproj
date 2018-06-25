@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
+    <PackageReference Include="Twilio" Version="5.13.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GuessingGame.Shared\GuessingGame.Shared.csproj" />
+    <ProjectReference Include="..\GuessingGame\GuessingGame.BusinessRules.csproj" />
+  </ItemGroup>
+
+</Project>

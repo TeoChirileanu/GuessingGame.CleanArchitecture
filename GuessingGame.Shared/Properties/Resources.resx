@@ -123,6 +123,9 @@
   <data name="CorrectMessage" xml:space="preserve">
     <value>Correct!</value>
   </data>
+  <data name="GameOverMessage" xml:space="preserve">
+    <value>Something bad happened. Sorry, game over. Here are some details: </value>
+  </data>
   <data name="InvalidNumberMessage" xml:space="preserve">
     <value>Invalid number. Please try again.</value>
   </data>
@@ -132,6 +135,9 @@
   <data name="MinValue" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="SendGridApiKey" xml:space="preserve">
+    <value>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</value>
+  </data>
   <data name="TooHighMessage" xml:space="preserve">
     <value>Too high!</value>
   </data>
@@ -140,6 +146,15 @@
   </data>
   <data name="TryAgainMessage" xml:space="preserve">
     <value>Try again:</value>
+  </data>
+  <data name="TwilioAccountSid" xml:space="preserve">
+    <value>AC6d26f0a9e694163f54a6cf4e8a6156d8</value>
+  </data>
+  <data name="TwilioAuthToken" xml:space="preserve">
+    <value>a67470343bae62d81bb5f8c27d430a92</value>
+  </data>
+  <data name="TwilioPhoneNumber" xml:space="preserve">
+    <value>+33644643326</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome to my game!</value>

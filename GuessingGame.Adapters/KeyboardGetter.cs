@@ -1,7 +1,8 @@
 ﻿using System;
-using GuessingGame.Properties;
+using GuessingGame.BusinessRules;
+using GuessingGame.Shared.Properties;
 
-namespace GuessingGame.ConsoleApplication {
+namespace GuessingGame.Adapters {
     public class KeyboardGetter : INumberGetter {
         private static readonly string MessageForTheUser =
             string.Format(Resources.AskForANumber, Resources.MinValue, Resources.MaxValue);

@@ -1,7 +1,9 @@
 ﻿using System;
-using GuessingGame.Properties;
+using GuessingGame.Adapters;
+using GuessingGame.BusinessRules;
+using GuessingGame.Shared.Properties;
 
-namespace GuessingGame.ConsoleApplication {
+namespace GuessingGame.Gui.ConsoleApplication {
     public class ConsoleApplication {
         private static void Main() {
 
@@ -9,7 +11,7 @@ namespace GuessingGame.ConsoleApplication {
                 PlayGame();
             }
             catch (Exception e) {
-                Console.WriteLine(Properties.Resources.GameOverMessage + e.Message);
+                Console.WriteLine(Resources.GameOverMessage + e.Message);
             }
         }
 

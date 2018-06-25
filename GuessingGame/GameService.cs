@@ -1,7 +1,7 @@
 ﻿using System;
-using GuessingGame.Properties;
+using GuessingGame.Shared.Properties;
 
-namespace GuessingGame {
+namespace GuessingGame.BusinessRules {
     public static class GameService {
         private static Random Random => new Random();
         public static int LowerBound => int.Parse(Resources.MinValue);

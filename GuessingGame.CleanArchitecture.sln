@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame", "GuessingGame\GuessingGame.csproj", "{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.BusinessRules", "GuessingGame\GuessingGame.BusinessRules.csproj", "{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Tests", "GuessingGame.Tests\GuessingGame.Tests.csproj", "{A88C5FFF-FF13-4890-8E6F-18B9E78E6DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.BusinessRules.Tests", "GuessingGame.Tests\GuessingGame.BusinessRules.Tests.csproj", "{A88C5FFF-FF13-4890-8E6F-18B9E78E6DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.ConsoleApplication", "GuessingGame.Console\GuessingGame.ConsoleApplication.csproj", "{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.ConsoleApplication", "GuessingGame.Console\GuessingGame.Gui.ConsoleApplication.csproj", "{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Adapters", "GuessingGame.Adapters\GuessingGame.Adapters.csproj", "{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Shared", "GuessingGame.Shared\GuessingGame.Shared.csproj", "{CC40CA0C-9867-4125-9E9F-C73974256BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC40CA0C-9867-4125-9E9F-C73974256BD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿using System;
-using GuessingGame.Properties;
+using GuessingGame.Shared.Properties;
 
-namespace GuessingGame {
+namespace GuessingGame.BusinessRules {
     public class Game : IGame {
         private readonly IMessenger _messenger;
 

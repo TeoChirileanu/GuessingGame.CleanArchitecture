@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GuessingGame.Properties {
+namespace GuessingGame.Shared.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GuessingGame.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessingGame.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessingGame.Shared.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -79,6 +79,15 @@ namespace GuessingGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Something bad happened. Sorry, game over. Here are some details: .
+        /// </summary>
+        public static string GameOverMessage {
+            get {
+                return ResourceManager.GetString("GameOverMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid number. Please try again..
         /// </summary>
         public static string InvalidNumberMessage {
@@ -106,6 +115,15 @@ namespace GuessingGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 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.
+        /// </summary>
+        public static string SendGridApiKey {
+            get {
+                return ResourceManager.GetString("SendGridApiKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Too high!.
         /// </summary>
         public static string TooHighMessage {
@@ -129,6 +147,33 @@ namespace GuessingGame.Properties {
         public static string TryAgainMessage {
             get {
                 return ResourceManager.GetString("TryAgainMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AC6d26f0a9e694163f54a6cf4e8a6156d8.
+        /// </summary>
+        public static string TwilioAccountSid {
+            get {
+                return ResourceManager.GetString("TwilioAccountSid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to a67470343bae62d81bb5f8c27d430a92.
+        /// </summary>
+        public static string TwilioAuthToken {
+            get {
+                return ResourceManager.GetString("TwilioAuthToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +33644643326.
+        /// </summary>
+        public static string TwilioPhoneNumber {
+            get {
+                return ResourceManager.GetString("TwilioPhoneNumber", resourceCulture);
             }
         }
         

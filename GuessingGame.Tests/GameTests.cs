@@ -1,8 +1,8 @@
-using GuessingGame.Properties;
+using GuessingGame.Shared.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace GuessingGame.Tests {
+namespace GuessingGame.BusinessRules.Tests {
     [TestClass]
     public class GameTests {
         private readonly Mock<IMessenger> _messengerMock = new Mock<IMessenger>();
