@@ -10,13 +10,13 @@ namespace GuessingGame.Gui.ConsoleApplication {
                 PlayGame();
             }
             catch (Exception e) {
-                Console.WriteLine(Resources.GameOverMessage + e.Message);
+                Console.WriteLine(Resources.GameOverMessage + e);
             }
         }
 
         private static void PlayGame() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(new Game(new SmsMessenger()), new KeyboardGetter());
+            var controller = new GameController(new Game(new ConsoleMessenger()), new FileGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);

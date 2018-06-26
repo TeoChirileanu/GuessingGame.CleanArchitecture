@@ -1,13 +1,13 @@
 ﻿using GuessingGame.BusinessRules;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GuessingGame.Adapters.WebApi.Controllers {
+namespace GuessingGame.Adapters.WebApi {
     [Route("api/")]
     [ApiController]
     public class NumberGetterController : ControllerBase {
         [HttpGet]
-        public ActionResult CheckNumber([FromQuery] int number, [FromServices] IMessenger _messenger) {
-            IGame game = new Game(_messenger);
+        public ActionResult CheckNumber([FromQuery] int number, [FromServices] IMessenger messenger) {
+            IGame game = new Game(messenger);
             game.Check(number);
             return Ok();
         }

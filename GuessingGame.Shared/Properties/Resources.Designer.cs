@@ -79,6 +79,15 @@ namespace GuessingGame.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modify the file, save it, then press return when ready..
+        /// </summary>
+        public static string FileGetterMessage {
+            get {
+                return ResourceManager.GetString("FileGetterMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Something bad happened. Sorry, game over. Here are some details: .
         /// </summary>
         public static string GameOverMessage {

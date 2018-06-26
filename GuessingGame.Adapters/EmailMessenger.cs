@@ -13,7 +13,9 @@ namespace GuessingGame.Adapters {
                 PlainTextContent = message
             };
             sendGridMessage.AddTo(new EmailAddress("teodorchirileanu@gmail.com"));
+#pragma warning disable 4014
             client.SendEmailAsync(sendGridMessage);
+#pragma warning restore 4014
         }
     }
 }

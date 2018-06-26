@@ -123,6 +123,9 @@
   <data name="CorrectMessage" xml:space="preserve">
     <value>Correct!</value>
   </data>
+  <data name="FileGetterMessage" xml:space="preserve">
+    <value>Modify the file, save it, then press return when ready.</value>
+  </data>
   <data name="GameOverMessage" xml:space="preserve">
     <value>Something bad happened. Sorry, game over. Here are some details: </value>
   </data>
