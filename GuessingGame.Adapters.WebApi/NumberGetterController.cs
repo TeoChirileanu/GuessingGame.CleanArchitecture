@@ -5,10 +5,15 @@ namespace GuessingGame.Adapters.WebApi {
     [Route("api/")]
     [ApiController]
     public class NumberGetterController : ControllerBase {
+        private readonly IGame _game;
+
+        public NumberGetterController(IGame game) {
+            _game = game;
+        }
+
         [HttpGet]
-        public ActionResult CheckNumber([FromQuery] int number, [FromServices] IMessenger messenger) {
-            IGame game = new Game(messenger);
-            game.Check(number);
+        public ActionResult CheckNumber([FromQuery] int number) {
+            _game.Check(number);
             return Ok();
         }
     }
