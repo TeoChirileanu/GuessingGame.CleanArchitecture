@@ -16,7 +16,7 @@ namespace GuessingGame.Gui.ConsoleApplication {
 
         private static void PlayGame() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(new Game(new ConsoleMessenger()), new FileGetter());
+            var controller = new GameController(new Game(new FileMessenger()), new FileGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);
