@@ -79,7 +79,7 @@ namespace GuessingGame.Shared.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modify the file, save it, then press return when ready..
+        ///   Looks up a localized string similar to Enter a valid number in the file, save it, then press return..
         /// </summary>
         public static string FileGetterMessage {
             get {

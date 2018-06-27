@@ -6,7 +6,7 @@ using GuessingGame.Shared.Properties;
 namespace GuessingGame.Gui.ConsoleApplication {
     public class ConsoleApplication {
         private static void Main() {
-            IGame game = new Game(new ConsoleMessenger(), new InMemoryLogger());
+            IGame game = new Game(new ConsoleMessenger(), new FileLogger());
             try {
                 Play(game);
             }
