@@ -17,20 +17,13 @@ namespace GuessingGame.Adapters {
                 string content = ReadFromFile();
                 parsedSuccessfully = int.TryParse(content, out parsedNumber);
             } while (!parsedSuccessfully);
-            
+
             return parsedNumber;
         }
 
         private string ReadFromFile() {
-            string content;
-            try {
-                content = File.ReadAllText(FullPathToFile);
-            }
-            catch (Exception e) {
-                throw new Exception($"Could not read from file {FullPathToFile}", e);
-            }
-
-            return content;
+            using (var stream = new StreamReader(FullPathToFile))
+                return stream.ReadToEnd();
         }
     }
 }
