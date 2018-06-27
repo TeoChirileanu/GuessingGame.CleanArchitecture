@@ -6,18 +6,18 @@ using GuessingGame.Shared.Properties;
 namespace GuessingGame.Gui.ConsoleApplication {
     public class ConsoleApplication {
         private static void Main() {
+            IGame game = new Game(new ConsoleMessenger(), new InMemoryLogger());
             try {
-                PlayGame();
+                Play(game);
             }
             catch (Exception e) {
                 Console.WriteLine(Resources.GameOverMessage + e);
             }
         }
 
-        private static void PlayGame() {
+        private static void Play(IGame game) {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(
-                new Game(new FileMessenger(), new InMemoryLogger()), new FileGetter());
+            var controller = new GameController(game, new FileGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);
