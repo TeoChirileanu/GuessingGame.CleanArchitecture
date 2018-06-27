@@ -124,6 +124,15 @@ namespace GuessingGame.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Here are your previous attempts:.
+        /// </summary>
+        public static string PreviousAttemptsMessage {
+            get {
+                return ResourceManager.GetString("PreviousAttemptsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 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.
         /// </summary>
         public static string SendGridApiKey {

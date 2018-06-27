@@ -8,16 +8,12 @@
             _numberGetter = numberGetter;
         }
 
-        public int GetNumber() {
-            return _numberGetter.GetNumber();
-        }
+        public int GetNumber() => _numberGetter.GetNumber();
 
-        public void CheckNumber(int number) {
-            _game.Check(number);
-        }
+        public void CheckNumber(int number) => _game.Check(number);
 
-        public bool IsGameOver() {
-            return _game.IsOver;
-        }
+        public bool IsGameOver() => _game.IsOver;
+
+        public void ShowPreviousAttempts() => _game.ShowPreviousAttempts();
     }
 }

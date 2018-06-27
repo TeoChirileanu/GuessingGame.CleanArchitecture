@@ -16,7 +16,7 @@ namespace GuessingGame.Adapters.WebApi {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSingleton<IGame, Game>(_ => new Game(new FileMessenger()));
+            services.AddSingleton<IGame, Game>(_ => new Game(new FileMessenger(), new InMemoryLogger()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -16,11 +16,15 @@ namespace GuessingGame.Gui.ConsoleApplication {
 
         private static void PlayGame() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(new Game(new FileMessenger()), new FileGetter());
+            var controller = new GameController(
+                new Game(new ConsoleMessenger(), new InMemoryLogger()), new KeyboardGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);
             } while (!controller.IsGameOver());
+
+            Console.WriteLine(Resources.PreviousAttemptsMessage);
+            controller.ShowPreviousAttempts();
         }
     }
 }

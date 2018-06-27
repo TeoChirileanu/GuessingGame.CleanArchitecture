@@ -162,4 +162,7 @@
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome to my game!</value>
   </data>
+  <data name="PreviousAttemptsMessage" xml:space="preserve">
+    <value>Here are your previous attempts:</value>
+  </data>
 </root>

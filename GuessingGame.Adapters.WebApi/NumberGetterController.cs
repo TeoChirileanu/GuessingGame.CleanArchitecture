@@ -7,9 +7,7 @@ namespace GuessingGame.Adapters.WebApi {
     public class NumberGetterController : ControllerBase {
         private readonly IGame _game;
 
-        public NumberGetterController(IGame game) {
-            _game = game;
-        }
+        public NumberGetterController(IGame game) =>_game = game;
 
         [HttpGet]
         public ActionResult CheckNumber([FromQuery] int number) {
