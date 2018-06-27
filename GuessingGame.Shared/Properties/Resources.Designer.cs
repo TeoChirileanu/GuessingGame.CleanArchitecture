@@ -151,6 +151,15 @@ namespace GuessingGame.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Server=.\SQLEXPRESS;Database=GuessingGame;Trusted_Connection=True;.
+        /// </summary>
+        public static string SqlServerConnectionString {
+            get {
+                return ResourceManager.GetString("SqlServerConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Too high!.
         /// </summary>
         public static string TooHighMessage {

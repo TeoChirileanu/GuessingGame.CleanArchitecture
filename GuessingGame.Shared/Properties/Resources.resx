@@ -168,4 +168,7 @@
   <data name="GameDirectory" xml:space="preserve">
     <value>%temp%\guessinggame</value>
   </data>
+  <data name="SqlServerConnectionString" xml:space="preserve">
+    <value>Server=.\SQLEXPRESS;Database=GuessingGame;Trusted_Connection=True;</value>
+  </data>
 </root>

@@ -22,8 +22,9 @@ namespace GuessingGame.Adapters {
         }
 
         private string ReadFromFile() {
-            using (var stream = new StreamReader(FullPathToFile))
+            using (var stream = new StreamReader(FullPathToFile)) {
                 return stream.ReadToEnd();
+            }
         }
     }
 }
