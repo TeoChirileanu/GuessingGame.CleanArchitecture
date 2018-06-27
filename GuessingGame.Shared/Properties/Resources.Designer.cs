@@ -88,6 +88,15 @@ namespace GuessingGame.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to %temp%\guessinggame.
+        /// </summary>
+        public static string GameDirectory {
+            get {
+                return ResourceManager.GetString("GameDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Something bad happened. Sorry, game over. Here are some details: .
         /// </summary>
         public static string GameOverMessage {

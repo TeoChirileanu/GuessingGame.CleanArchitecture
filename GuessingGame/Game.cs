@@ -43,6 +43,7 @@ namespace GuessingGame.BusinessRules {
         }
 
         public void ShowPreviousAttempts() {
+            _messenger.Deliver(Resources.PreviousAttemptsMessage);
             _messenger.Deliver(_logger.GetLog());
             _logger.ClearLog();
         }

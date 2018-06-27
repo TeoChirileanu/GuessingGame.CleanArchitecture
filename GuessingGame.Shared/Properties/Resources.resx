@@ -165,4 +165,7 @@
   <data name="PreviousAttemptsMessage" xml:space="preserve">
     <value>Here are your previous attempts:</value>
   </data>
+  <data name="GameDirectory" xml:space="preserve">
+    <value>%temp%\guessinggame</value>
+  </data>
 </root>

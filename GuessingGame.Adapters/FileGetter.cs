@@ -5,25 +5,29 @@ using GuessingGame.Shared.Properties;
 
 namespace GuessingGame.Adapters {
     public class FileGetter : INumberGetter {
-        private readonly string _file =
-            Environment.ExpandEnvironmentVariables(@"%temp%\guessinggame\number.in");
+        private readonly string _pathToFile = Path.Combine(Resources.GameDirectory, "number.in");
+        private string FullPathToFile => Environment.ExpandEnvironmentVariables(_pathToFile);
 
         public int GetNumber() {
-            Console.WriteLine(Resources.FileGetterMessage);
-            Console.ReadKey();
-            string content = ReadFromFile();
-            bool parsedSuccessfully = int.TryParse(content, out int parsedNumber);
-            if (!parsedSuccessfully) throw new Exception($"Parsing failed. {content} is not a valid number.");
+            bool parsedSuccessfully;
+            int parsedNumber;
+            do {
+                Console.WriteLine(Resources.FileGetterMessage);
+                Console.ReadKey();
+                string content = ReadFromFile();
+                parsedSuccessfully = int.TryParse(content, out parsedNumber);
+            } while (!parsedSuccessfully);
+            
             return parsedNumber;
         }
 
         private string ReadFromFile() {
             string content;
             try {
-                content = File.ReadAllText(_file);
+                content = File.ReadAllText(FullPathToFile);
             }
             catch (Exception e) {
-                throw new Exception($"Could not read from file {_file}", e);
+                throw new Exception($"Could not read from file {FullPathToFile}", e);
             }
 
             return content;
