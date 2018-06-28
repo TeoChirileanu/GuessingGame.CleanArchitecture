@@ -6,7 +6,10 @@ namespace GuessingGame.Gui.ConsoleApplication {
     public class SqlLogger : ILogger {
         public void Log(string message) {
             using (var context = new LogContext()) {
-                context.Logs.Add(new Log {TimeStamp = DateTime.Now, Content = message});
+                context.Logs.Add(new SqlLog {
+                    TimeStamp = DateTime.Now,
+                    Message= message
+                });
                 context.SaveChanges();
             }
         }
