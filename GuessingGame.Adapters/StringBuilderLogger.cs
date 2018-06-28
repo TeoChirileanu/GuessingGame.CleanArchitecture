@@ -3,7 +3,7 @@ using System.Text;
 using GuessingGame.BusinessRules;
 
 namespace GuessingGame.Adapters {
-    public class InMemoryLogger : ILogger {
+    public class StringBuilderLogger : ILogger {
         private readonly StringBuilder _stringBuilder = new StringBuilder($"{DateTime.Now}\tLog started\n");
 
         public void Log(string message) => _stringBuilder.AppendLine($"{DateTime.Now}\t{message}");
