@@ -6,20 +6,19 @@ using GuessingGame.Shared.Properties;
 namespace GuessingGame.Gui.ConsoleApplication {
     public class ConsoleApplication {
         private static void Main() {
-            IGame game = new Game(new ConsoleMessenger(), new StringBuilderLogger()) {
-                CorrectNumber = 50
-            };
             try {
-                Play(game);
+                Play();
             }
             catch (Exception e) {
                 Console.WriteLine(Resources.GameOverMessage + e);
             }
         }
 
-        private static void Play(IGame game) {
+        private static void Play() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(game, new KeyboardGetter());
+            var controller = new GameController(new Game(new ConsoleMessenger(), new StringBuilderLogger()) {
+                CorrectNumber = 50
+            }, new KeyboardGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);

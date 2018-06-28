@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace GuessingGame.Adapters.WebApi {
     [Route("api/")]
     [ApiController]
-    public class NumberGetterController : ControllerBase {
+    public class WebApiController : ControllerBase {
         private readonly IGame _game;
 
-        public NumberGetterController(IGame game) => _game = game;
+        public WebApiController(IGame game) => _game = game;
 
         [HttpGet]
         public ActionResult CheckNumber([FromQuery] int number) {
