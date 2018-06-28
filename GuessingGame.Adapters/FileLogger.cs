@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using GuessingGame.BusinessRules;
+using GuessingGame.Shared;
 using GuessingGame.Shared.Properties;
 
 namespace GuessingGame.Adapters {
@@ -10,7 +11,10 @@ namespace GuessingGame.Adapters {
 
         public void Log(string message) {
             using (var stream = new StreamWriter(FullPathToFile, true)) {
-                stream.WriteLine(message);
+                stream.WriteLine(new Log {
+                    TimeStamp = DateTime.Now,
+                    Message = message
+                });
             }
         }
 
