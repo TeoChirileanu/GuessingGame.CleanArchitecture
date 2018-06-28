@@ -1,15 +1,10 @@
 ﻿using System;
-using System.IO;
 using GuessingGame.BusinessRules;
 using GuessingGame.Shared;
-using GuessingGame.Shared.Properties;
 using MongoDB.Driver;
 
 namespace GuessingGame.Gui.ConsoleApplication {
     public class MongoLogger : ILogger {
-        private readonly string _pathToFile = Path.Combine(Resources.GameDirectory, "log.mongo");
-        private string FullPathToFile => Environment.ExpandEnvironmentVariables(_pathToFile);
-
         public MongoLogger() {
             var client = new MongoClient();
             var database = client.GetDatabase("GuessingGame");
@@ -19,8 +14,7 @@ namespace GuessingGame.Gui.ConsoleApplication {
         private IMongoCollection<NoSqlLog> LogCollection { get; }
 
         public void Log(string message) {
-            LogCollection.InsertOne(new NoSqlLog
-            {
+            LogCollection.InsertOne(new NoSqlLog {
                 TimeStamp = DateTime.Now,
                 Message = message
             });
