@@ -22,7 +22,9 @@ namespace GuessingGame.Gui.Blazor.Server {
                 });
             });
 
-            services.AddSingleton<IGame, Game>(_ => new Game(new FileMessenger(), new FileLogger()));
+            services.AddSingleton<IGame, Game>(_ =>
+                new Game(new FileMessenger(), new FileLogger()) {CorrectNumber = 50});
+            services.AddTransient<IReader, FileReader>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
