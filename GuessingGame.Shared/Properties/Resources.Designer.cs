@@ -106,11 +106,29 @@ namespace GuessingGame.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to number.in.
+        /// </summary>
+        public static string InputFile {
+            get {
+                return ResourceManager.GetString("InputFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid number. Please try again..
         /// </summary>
         public static string InvalidNumberMessage {
             get {
                 return ResourceManager.GetString("InvalidNumberMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to number.log.
+        /// </summary>
+        public static string LogFile {
+            get {
+                return ResourceManager.GetString("LogFile", resourceCulture);
             }
         }
         
@@ -129,6 +147,15 @@ namespace GuessingGame.Shared.Properties {
         public static string MinValue {
             get {
                 return ResourceManager.GetString("MinValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to number.out.
+        /// </summary>
+        public static string OutputFile {
+            get {
+                return ResourceManager.GetString("OutputFile", resourceCulture);
             }
         }
         

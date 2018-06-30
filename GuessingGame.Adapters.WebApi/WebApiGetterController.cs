@@ -6,7 +6,6 @@ namespace GuessingGame.Adapters.WebApi {
     [ApiController]
     public class WebApiGetterController : ControllerBase {
         private readonly IGame _game;
-
         public WebApiGetterController(IGame game) => _game = game;
 
         [HttpGet]

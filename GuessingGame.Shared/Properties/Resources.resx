@@ -171,4 +171,13 @@
   <data name="SqlServerConnectionString" xml:space="preserve">
     <value>Server=.\SQLEXPRESS;Database=GuessingGame;Trusted_Connection=True;</value>
   </data>
+  <data name="InputFile" xml:space="preserve">
+    <value>number.in</value>
+  </data>
+  <data name="LogFile" xml:space="preserve">
+    <value>number.log</value>
+  </data>
+  <data name="OutputFile" xml:space="preserve">
+    <value>number.out</value>
+  </data>
 </root>

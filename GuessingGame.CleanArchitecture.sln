@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Shared", "Gues
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Adapters.WebApi", "GuessingGame.Adapters.WebApi\GuessingGame.Adapters.WebApi.csproj", "{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Gui.Blazor.Server", "GuessingGame.Gui.Blazor.Server\GuessingGame.Gui.Blazor.Server.csproj", "{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Gui.Blazor.Client", "GuessingGame.Gui.Blazor.Client\GuessingGame.Gui.Blazor.Client.csproj", "{747CF575-3248-4FBA-8598-9E60AA5CE341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,22 @@ Global
 		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Release|x64.ActiveCfg = Release|x64
 		{8910DBAA-6E4C-427E-8D39-EA648EF3EF48}.Release|x64.Build.0 = Release|x64
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Debug|x64.Build.0 = Debug|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Release|x64.ActiveCfg = Release|Any CPU
+		{C0E16915-D9C3-4028-8E0C-0EAE2E6C9607}.Release|x64.Build.0 = Release|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Debug|x64.Build.0 = Debug|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Release|x64.ActiveCfg = Release|Any CPU
+		{747CF575-3248-4FBA-8598-9E60AA5CE341}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
