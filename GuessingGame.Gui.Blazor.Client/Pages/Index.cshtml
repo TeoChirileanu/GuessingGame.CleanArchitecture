@@ -1,50 +1,58 @@
 ﻿@page "/"
 @inject HttpClient http
+@using GuessingGame.Shared
+@using Microsoft.AspNetCore.Blazor.Browser.Interop;
 
 <h1>Wanna play a game?</h1>
 
 <div>
     <label for="@Number">Enter your number:</label>
-    <input id="myInput" bind="@Number" placeholder="Good Luck!"/>
+    <input id="myInput" bind="@Number" placeholder="Good Luck!" />
 </div>
 
 <div>
-    <button onclick="@(async () => await CheckNumber())" hidden="@gameOver">Check</button>
-    @if (!string.IsNullOrWhiteSpace(Message)) {
+    <button onclick="@(async () => await CheckNumber())">Check</button>
+    @if (!string.IsNullOrWhiteSpace(Message))
+    {
         @Message
     }
 </div>
 
 <div>
-    @if (gameOver) {
-        <button onclick="@(async () => await ShowLogs())">Show Log</button>
-        @if (!string.IsNullOrWhiteSpace(Logs)) {
-             @foreach (string line in Logs.Split('\n')) {
-                  @line
-                  <br/>
-              }
-         }
+    @if (gameOver)
+    {
+        <button id="ShowLogsButton" onclick="@(async () => await ShowLogs())">Show Log</button>
+        @if (!string.IsNullOrWhiteSpace(Logs))
+        {
+            @foreach (string line in Logs.Split('\n'))
+            {
+                @line
+                <br />
+            }
+        }
         <button onclick="location.reload()">Play Again</button>
     }
 </div>
 
 @functions {
-    string Number { get; set; }
-    string Message { get; set; }
-    string Logs { get; set; }
-    bool gameOver { get; set; }
+string Number { get; set; }
+string Message { get; set; }
+string Logs { get; set; }
+bool gameOver { get; set; }
 
-    async Task CheckNumber() {
-        var response = await http.GetAsync($"/api/game/checknumber/?number={Number}").ConfigureAwait(false);
-        Message = await response.Content.ReadAsStringAsync();
-        if(Message.Contains("Correct")) gameOver = true;
-        StateHasChanged();
-    }
+async Task CheckNumber()
+{
+    var response = await http.GetJsonAsync<GameResponse>($"/api/checknumber/?number={Number}").ConfigureAwait(false);
+    Message = response.Content;
+    if (Message.Contains("Correct")) gameOver = true;
+    StateHasChanged();
+}
 
-    async Task ShowLogs() {
-        var response = await http.GetAsync($"/api/game/showlogs").ConfigureAwait(false);
-        Logs = await response.Content.ReadAsStringAsync();
-        StateHasChanged();
-    }
-
+async Task ShowLogs()
+{
+    var response = await http.GetJsonAsync<GameResponse>($"/api/showlogs").ConfigureAwait(false);
+    Logs = response.Content;
+    RegisteredFunction.Invoke<bool>("DisableShowLogsButton");
+    StateHasChanged();
+}
 }
