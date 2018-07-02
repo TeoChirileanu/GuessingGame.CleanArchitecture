@@ -19,14 +19,13 @@ namespace GuessingGame.Gui.Blazor.Server.Controllers {
         public ActionResult CheckNumber([FromQuery] int number) {
             _game.Check(number);
             string message = _reader.Read(Resources.OutputFile);
-            return message.Contains("correct", StringComparison.OrdinalIgnoreCase)
-                       ? Ok(message)
-                       : StatusCode(303, message);
+            return Ok(message);
         }
 
         [HttpGet("[action]")]
         public ActionResult ShowLogs() {
-            string message = _reader.Read(Resources.LogFile);
+            _game.ShowPreviousAttempts();
+            string message = _reader.Read(Resources.OutputFile);
             return Ok(message);
         }
     }

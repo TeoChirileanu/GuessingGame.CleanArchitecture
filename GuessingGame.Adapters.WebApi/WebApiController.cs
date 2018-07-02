@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace GuessingGame.Adapters.WebApi {
     [Route("api/")]
     [ApiController]
-    public class WebApiGetterController : ControllerBase {
+    public class WebApiController : ControllerBase {
         private readonly IGame _game;
-        public WebApiGetterController(IGame game) => _game = game;
+        public WebApiController(IGame game) => _game = game;
 
         [HttpGet]
         public ActionResult CheckNumber([FromQuery] int number) {
