@@ -18,7 +18,7 @@ namespace GuessingGame.Adapters.WebApi {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<IGame, Game>(_ =>
-                new Game(new FileMessenger(), new FileLogger()) { CorrectNumber = 50 });
+                new Game(new FileMessenger(), new StringBuilderLogger()));
             services.AddTransient<IReader, FileReader>();
         }
 

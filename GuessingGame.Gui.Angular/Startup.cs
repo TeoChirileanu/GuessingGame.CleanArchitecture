@@ -25,7 +25,7 @@ namespace GuessingGame.Gui.Angular {
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
 
             services.AddSingleton<IGame, Game>(_ =>
-                new Game(new FileMessenger(), new FileLogger()) { CorrectNumber = 50 });
+                new Game(new FileMessenger(), new StringBuilderLogger()));
             services.AddTransient<IReader, FileReader>();
         }
 

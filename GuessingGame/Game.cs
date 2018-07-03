@@ -46,6 +46,7 @@ namespace GuessingGame.BusinessRules {
             _messenger.Deliver(Resources.PreviousAttemptsMessage);
             _messenger.Deliver(_logger.GetLog());
             _logger.ClearLog();
+            CorrectNumber = GameService.GetRandomNumber();
         }
 
         private bool IsValid(int number) {
