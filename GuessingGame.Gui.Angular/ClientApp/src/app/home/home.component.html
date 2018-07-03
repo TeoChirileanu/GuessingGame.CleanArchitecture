@@ -1,0 +1,18 @@
+<div>
+  <label>Guess my number:</label><br>
+  <input id="InputBox" type="number" (keyup.enter)="CheckNumber()" [(ngModel)]="Number" placeholder="Good luck!" autofocus>
+</div>
+
+<div *ngIf="!GameOver">
+  <button (click)="CheckNumber()">Check</button>
+  <p *ngIf="Message">{{Message}}</p>
+</div>
+
+<div *ngIf="GameOver">
+  <button (click)="ShowLogs()">Show Log</button>
+  <p *ngFor="let Log of Logs">{{Log}}</p>
+</div>
+
+<div *ngIf="GameOver">
+  <button (click)="PlayAgain()">Play again?</button>
+</div>
