@@ -17,7 +17,9 @@ namespace GuessingGame.Adapters.WebApi {
         public void ConfigureServices(IServiceCollection services) {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSingleton<IGame, Game>(_ => new Game(new ConsoleMessenger(), new StringBuilderLogger()));
+            services.AddSingleton<IGame, Game>(_ =>
+                new Game(new FileMessenger(), new FileLogger()) { CorrectNumber = 50 });
+            services.AddTransient<IReader, FileReader>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,7 +29,7 @@ namespace GuessingGame.Adapters.WebApi {
             else
                 app.UseHsts();
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseMvc();
         }
     }
