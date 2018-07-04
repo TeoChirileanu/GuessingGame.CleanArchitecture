@@ -16,7 +16,7 @@ namespace GuessingGame.Gui.ConsoleApplication {
 
         private static void Play() {
             Console.WriteLine(Resources.WelcomeMessage);
-            var controller = new GameController(new Game(new EmailMessenger(), new StringBuilderLogger()){CorrectNumber = 50}, new KeyboardGetter());
+            var controller = new GameController(new Game(new ConsoleMessenger(), new MongoLogger()){CorrectNumber = 50}, new KeyboardGetter());
             do {
                 int number = controller.GetNumber();
                 controller.CheckNumber(number);
