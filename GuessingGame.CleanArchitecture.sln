@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.Blazor.Ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.Blazor.Client", "GuessingGame.Gui.Blazor.Client\GuessingGame.Gui.Blazor.Client.csproj", "{747CF575-3248-4FBA-8598-9E60AA5CE341}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Gui.Angular", "GuessingGame.Gui.Angular\GuessingGame.Gui.Angular.csproj", "{92EC79DF-57FE-41B3-A691-5C1E34A59EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.Angular", "GuessingGame.Gui.Angular\GuessingGame.Gui.Angular.csproj", "{92EC79DF-57FE-41B3-A691-5C1E34A59EC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.Gui.React", "GuessingGame.Gui.React\GuessingGame.Gui.React.csproj", "{70E87027-69C7-4C10-A33B-F9D36DA035FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,14 @@ Global
 		{92EC79DF-57FE-41B3-A691-5C1E34A59EC8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92EC79DF-57FE-41B3-A691-5C1E34A59EC8}.Release|x64.ActiveCfg = Release|Any CPU
 		{92EC79DF-57FE-41B3-A691-5C1E34A59EC8}.Release|x64.Build.0 = Release|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Debug|x64.Build.0 = Debug|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Release|x64.ActiveCfg = Release|Any CPU
+		{70E87027-69C7-4C10-A33B-F9D36DA035FE}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
