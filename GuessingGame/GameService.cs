@@ -14,7 +14,19 @@ namespace GuessingGame.BusinessRules {
         public static int GetRandomNumber(int lowerBound, int upperBound) =>
             Random.Next(lowerBound, upperBound);
 
-        public static void Validate(int number) {
+
+        public static bool IsValid(int number) {
+            try {
+                Validate(number);
+            }
+            catch (Exception) {
+                return false;
+            }
+
+            return true;
+        }
+
+        private static void Validate(int number) {
             if (number < LowerBound || number > UpperBound)
                 throw new ArgumentOutOfRangeException(nameof(number));
         }

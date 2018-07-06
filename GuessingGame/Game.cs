@@ -17,7 +17,7 @@ namespace GuessingGame.BusinessRules {
 
         public void Check(int number) {
             _logger.Log($"Checking {number}...");
-            if (!IsValid(number)) {
+            if (!GameService.IsValid(number)) {
                 _logger.Log(Resources.InvalidNumberMessage);
                 _messenger.Deliver(Resources.InvalidNumberMessage);
                 return;
@@ -47,17 +47,6 @@ namespace GuessingGame.BusinessRules {
             _messenger.Deliver(_logger.GetLog());
             _logger.ClearLog();
             CorrectNumber = GameService.GetRandomNumber();
-        }
-
-        private bool IsValid(int number) {
-            try {
-                GameService.Validate(number);
-            }
-            catch (Exception) {
-                return false;
-            }
-
-            return true;
         }
     }
 }
