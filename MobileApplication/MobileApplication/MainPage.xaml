@@ -7,8 +7,9 @@
     <StackLayout>
         <!-- Place new controls here -->
     	<Label Text="Guess my number:"/>
-        <Entry Placeholder="Good luck!" Completed="IncrementNumber"/>
+        <Entry Placeholder="Good luck!" Completed="CheckNumber"/>
         <Label Text="{Binding}"/>
+        <Button Text="Show Logs" Clicked="ShowLogs"/>
     </StackLayout>
 
 </ContentPage>

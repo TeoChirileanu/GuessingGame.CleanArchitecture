@@ -7,9 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace GuessingGame.Adapters.WebApi {
     public class Startup {
-        public Startup(IConfiguration configuration) {
-            Configuration = configuration;
-        }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public IConfiguration Configuration { get; }
 
@@ -18,7 +16,9 @@ namespace GuessingGame.Adapters.WebApi {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<IGame, Game>(_ =>
-                new Game(new FileMessenger(), new StringBuilderLogger()));
+                new Game(new FileMessenger(), new StringBuilderLogger()) {
+                    CorrectNumber = 50
+                });
             services.AddTransient<IReader, FileReader>();
         }
 
