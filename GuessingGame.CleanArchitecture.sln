@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.BusinessRules", "GuessingGame\GuessingGame.BusinessRules.csproj", "{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.ConsoleApplication", "GuessingGame.Console\GuessingGame.Gui.ConsoleApplication.csproj", "{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Adapters", "GuessingGame.Adapters\GuessingGame.Adapters.csproj", "{255F3B25-BA51-4B4C-B0D8-85B42AA233FA}"
@@ -21,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.Angular", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.Gui.React", "GuessingGame.Gui.React\GuessingGame.Gui.React.csproj", "{70E87027-69C7-4C10-A33B-F9D36DA035FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame.BusinessRules.Tests", "GuessingGame.BusinessRules.Tests\GuessingGame.BusinessRules.Tests.csproj", "{8D322C8F-CC41-4802-9688-9DC76F1108F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.BusinessRules.Tests", "GuessingGame.BusinessRules.Tests\GuessingGame.BusinessRules.Tests.csproj", "{8D322C8F-CC41-4802-9688-9DC76F1108F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame.BusinessRules", "GuessingGame\GuessingGame.BusinessRules.csproj", "{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Debug|Any CPU.Build.0 = Debug|x64
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Debug|x64.ActiveCfg = Debug|x64
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Debug|x64.Build.0 = Debug|x64
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Release|x64.ActiveCfg = Release|x64
-		{F2EB2D96-6AD4-4795-AA95-876EC97E94BC}.Release|x64.Build.0 = Release|x64
 		{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}.Debug|Any CPU.Build.0 = Debug|x64
 		{058ECC3E-C58E-4F84-9889-0D203C3DDAD2}.Debug|x64.ActiveCfg = Debug|x64
@@ -111,6 +103,14 @@ Global
 		{8D322C8F-CC41-4802-9688-9DC76F1108F1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D322C8F-CC41-4802-9688-9DC76F1108F1}.Release|x64.ActiveCfg = Release|Any CPU
 		{8D322C8F-CC41-4802-9688-9DC76F1108F1}.Release|x64.Build.0 = Release|Any CPU
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Debug|x64.ActiveCfg = Debug|x64
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Debug|x64.Build.0 = Debug|x64
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Release|x64.ActiveCfg = Release|x64
+		{616518AF-8ED4-4772-9ED8-D55AE05E7AC5}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

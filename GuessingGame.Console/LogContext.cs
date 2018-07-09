@@ -12,8 +12,8 @@ namespace GuessingGame.Gui.ConsoleApplication {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             //optionsBuilder.UseSqlServer(Resources.SqlServerConnectionString);
-            optionsBuilder.UseSqlite($"Data Source={FullPathToFile}");
-            //optionsBuilder.UseInMemoryDatabase("GuessingGame");
+            //optionsBuilder.UseSqlite($"Data Source={FullPathToFile}");
+            optionsBuilder.UseInMemoryDatabase(FullPathToFile);
         }
     }
 }

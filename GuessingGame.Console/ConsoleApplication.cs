@@ -4,7 +4,7 @@ using GuessingGame.BusinessRules;
 using GuessingGame.Shared.Properties;
 
 namespace GuessingGame.Gui.ConsoleApplication {
-    public class ConsoleApplication {
+    public static class ConsoleApplication {
         private static void Main() {
             try {
                 Play();
@@ -17,7 +17,7 @@ namespace GuessingGame.Gui.ConsoleApplication {
         private static void Play() {
             Console.WriteLine(Resources.WelcomeMessage);
             var controller =
-                new GameController(new Game(new ConsoleMessenger(), new MongoLogger()) {
+                new GameController(new Game(new ConsoleMessenger(), new StringBuilderLogger()) {
                         CorrectNumber = 50
                     },
                     new KeyboardGetter());
